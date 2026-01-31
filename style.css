@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#7D5697,#653288,#310a4b,#310a4b);
+    /* background: url(./src/liquid-purple-art-painting-abstract-colorful-background-with-color-splash-paints-modern-art.jpg); */
+    padding: 40px;
+    background-size: cover;
+    color: #000000;
+}
+
+/* ================= FORM ================= */
+
+.addElementContainer {
+    /* width: 90%; */
+    background-color: #000000;
+    padding: 24px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 40px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.addElementContainer h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #653288;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.addElementContainer input {
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #BFC9D1;
+    background-color: #EAEFEF;
+    color: #000000;
+    font-size: 13px;
+}
+
+.addElementContainer select {
+    padding: 8px 25px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #BFC9D1;
+    background-color: #EAEFEF;
+    color: #000000;
+    font-size: 13px;
+}
+
+.addElementContainer input::placeholder {
+    color: #000000;
+}
+
+.addElementContainer input:focus,
+.addElementContainer select:focus {
+    outline: none;
+    border-color: #653288;
+}
+
+.addElementContainer button {
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #653288;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.addElementContainer button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(96, 16, 121, 0.4);
+}
+
+.addElementContainer button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ================= TABLE ================= */
+
+.expTable {
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+#expenseTable {
+    width: 100%;
+    font-weight: 700;
+    border-collapse: collapse; /* STOP avoiding this */
+    background-color: #53147eb4;
+    backdrop-filter: blur(7px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#expenseTable thead {
+    background-color: #000000;
+}
+
+#expenseTable th {
+    padding: 14px;
+    font-size: 15px;
+    color: #653288;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+#expenseTable td {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid #BFC9D1;
+    color: #000000;
+}
+
+#expenseTable tbody tr:hover {
+    background-color: rgba(191, 201, 209, 0.25);
+}
+
+#expenseTable th,
+#expenseTable td {
+    border: 1px solid #653288;
+}
+
+.delBtn{
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #000000;
+    color: #653288;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.delBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.delBtn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets & below */
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+
+    .addElementContainer {
+        justify-content: center;
+    }
+
+    .addElementContainer input,
+    .addElementContainer select,
+    .addElementContainer button {
+        width: 48%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .addElementContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .addElementContainer h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .addElementContainer input,
+    .addElementContainer select,
+    .addElementContainer button {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}

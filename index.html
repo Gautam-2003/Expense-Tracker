@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+
+    <div class="addElementContainer">   
+        <h2>Add Expense</h2>
+
+        <input type="text" id="expName" placeholder="Expense Name">
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="number" id="quantity" placeholder="Quantity">
+        
+        <select id="expenseCategory">
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="shopping">Shopping</option>
+            <option value="bills">Bills</option>
+            <option value="others">Others</option>
+        </select>
+
+        <select id="expenseType">
+            <option value="personal">Personal</option>
+            <option value="office">Office</option>
+            <option value="trip">Trip</option>
+        </select>
+        <input type="date" id="date">
+        
+
+        <button id="addExpenseBtn" onclick="addExp()">Add Expense</button>
+        <button id="addExpenseBtn" onclick="clearData()">Clear All</button>
+    </div>
+    
+
+    <div class="expTable">
+        <table id="expenseTable">
+            <thead >
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>CTA</th>
+                </tr>
+            </thead>
+            <tbody id="expTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
