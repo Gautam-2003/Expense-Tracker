@@ -1,2 +1,2 @@
-# E-commerce
-This is an E-commerce website built on Html , Css , Vanilla Js
+# Expense Tracker
+This is an Expense Tracker built on Html , Css & Vanilla Js
